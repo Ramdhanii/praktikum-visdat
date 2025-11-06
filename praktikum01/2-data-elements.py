@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import altair as alt
-import matplotlib.pyplot as pit
+import matplotlib.pyplot as plt
 
 st.title("Praktikum 1 - Visualisasi Data")
 st.caption("Bagian 2: Data Elements")
@@ -60,8 +60,27 @@ x='a', y='b', tooltip=['a','b']
 )
 st.write(chart)
 
+"Adding 5 & 4", 5 + 4   # Menampilkan teks dan hasil penjumlahan
+a = 5                   # Menyimpan nilai 5 ke dalam variabel a
+"a =", a                # Menampilkan teks dan nilai variabel a
+
+# Markdown dengan Magic Feature
+# Streamlit dapat langsung menampilkan string markdown tanpa perlu st.markdown()
+"Markdown working without defining its function explicitly."
+
+# DataFrame menggunakan Magic
+import pandas as pd     # Import pustaka pandas untuk membuat DataFrame
+df = pd.DataFrame({'col': [1, 2]})  # Membuat DataFrame sederhana
+"dataframe", df
+
+# Membuat data acak menggunakan distribusi logistik
 s = np.random.logistic(10, 5, size=5)
-chart, ax = pit.subplot()
+
+# Membuat objek figure dan axis menggunakan matplotlib
+chart, ax = plt.subplots()
+
+# Membuat histogram dengan 15 bins
 ax.hist(s, bins=15)
 
+# Magic chart — Streamlit otomatis menampilkan objek chart
 "chart", chart
