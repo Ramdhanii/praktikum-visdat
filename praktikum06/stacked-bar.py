@@ -71,7 +71,6 @@ st.pyplot(fig)
 #4. Grafik Multiple Stacker Vertical Bar Chart
 st.subheader('4. Multiple Stacked Vertical Bar Cart')
 
-
 fig, ax = plt.subplots()
 width = 0.4
 x = np.arange(len(stores))
